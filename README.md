@@ -1,6 +1,14 @@
 # Product-Deduplication
 A practical implementation for product deduplication using TFIDF and Super Bit LSH
 
+# Table of Content
+- [Framework Overview](#framework-overview)
+- [Compile and Usage](#compile-and-usage)
+- [Code Documentation](#code-documentation)
+- [Simple Analytic Results](#simple-analytic-results)
+- [Future Works](#future-works)
+
+
 Framework Overview
 ==================
 
@@ -95,7 +103,8 @@ The detailed code documentation was located in the folder “JavaDoc". Here we j
               public double calculateSimilarityScore(Item a, SparseDoubleVector v1, Item b, SparseDoubleVector v2)
               
 
- Simple Analytic Results
+ 
+Simple Analytic Results
 =======================
 
 Does TFIDF Help?
