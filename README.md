@@ -83,6 +83,46 @@ Code Documentation
 
 Code Hierarchy
 --------------
+    .1 ItemSim/src.
+    .2 main: the main source code folder.
+     .3 itemsim.
+         .4 FindSimilarItem.java: Search similar item module.
+         .4 Item.java: The in-memory data structure for Item Class.
+         .4 ItemFeature.java: Featurization module.
+         .4 ItemLSHIndex.java: LSH module.
+         .4 LinearSimilarity.java: the similarity metric module.
+         .4 ParseData.java: Read and Parse Json file into Memory.
+         .4 SimilarityMeasure.java: A similarity interface.
+    .3 uti.
+         .4 KStemStandardAnalyzer.java: an instance of KStem tokenization.
+         .4 TokenProcessor.java: tokenization module.
+         .4 SimilarityUtil: common similarity measurements.
+    .2 META-INF.
+      .3 MANIFEST.MF: the meta-data file that specifies the main class.
+    .2 test: the unit test cases.
+      .3 itemsim.
+         .4 FindSimilarItemTest.java: the unit test for Search similar item module.
+         .4 ItemFeatureTest.java: the unit test for Featurization module.
+         .4 ItemLSHIndexTest.java: the unit test for LSH module.
+         .4 ParseDataTest.java: the unit test for Json Parser module.
+      .3 uti.
+     .2 call\_ebay\_api.py: call Ebay API and save search results into Json file.
+     .2 ebay\_developer\_api\_config.json: API key setting.
+    .1 ItemSim/lib.
+     .2 hamcrest-core-1.3.jar.
+     .2 jackson-annotations-2.8.0.jar.
+     .2 jackson-core-2.8.3.jar.
+     .2 jackson-core-2.8.3-javadoc.jar.
+     .2 jackson-databind-2.8.3-javadoc.jar.
+     .2 jackson-databind-2.8.3.jar.
+     .2 java-lsh-0.10.jar.
+     .2 junit-4.12.jar.
+     .2 java-string-similarity-0.18.jar.
+     .2 KStem.jar.
+     .2 lucene-core-2.3.2.jar.
+    .1 ItemSim/searchout: the folder that stores the Json file.
+    .1 Documentation.
+     .2 JavaDoc: the Documentation for Java Codes
 Java Class Documentation
 ------------------------
 
