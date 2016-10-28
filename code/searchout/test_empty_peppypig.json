@@ -1,0 +1,1 @@
+{"findItemsByKeywordsResponse": [{"itemSearchURL": ["http://www.ebay.com/sch/i.html?_nkw=PeppyPig&_ddo=1&_ipg=100&_pgn=1"], "paginationOutput": [{"totalPages": ["0"], "entriesPerPage": ["100"], "pageNumber": ["0"], "totalEntries": ["0"]}], "ack": ["Success"], "timestamp": ["2016-09-28T05:48:54.625Z"], "searchResult": [{"@count": "0"}], "version": ["1.13.0"]}]}

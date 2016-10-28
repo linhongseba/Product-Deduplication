@@ -1,0 +1,3 @@
+{"findItemsByKeywordsResponse": [{"itemSearchURL": ["http://www.ebay.com/sch/i.html?_nkw=iphone+6+plus&_ddo=1&_ipg=100&_pgn=1"], "paginationOutput": [{"totalPages": ["11185"], "entriesPerPage": ["100"], "pageNumber": ["1"], "totalEntries": ["1118453"]}], "ack": ["Success"], "timestamp": ["2016-09-28T06:00:28.470Z"], "searchResult": [
+    {"item": 
+        [{"itemId": ["191891222417"], "title": ["New Apple iPhone 6 s/Plus 16/64/128GB Space Gray Black Rose Gold Silver Unlocked"]}, {"itemId": ["361677237880"], "title": ["New Apple iPhone 6 Plus AT&T - GSM 16GB Silver, Space Gray or Gold LTE"]}, {"itemId": ["191891222417"],"title": ["New Apple iPhone 6 s/Plus 16/64/128GB Space Gray Black Rose Gold Silver Unlocked"]}], "@count": "3"}], "version": ["1.13.0"]}]}
