@@ -8,7 +8,7 @@ Given a query *q*, a list of search results *L* where each item *I* ∈ *L* 
 
 Note that the similarity of product items could have different interpretations. For instance, we may focus on finding the same product with different settings (e.g., iphone 7 64GB memory versus iphone 7 128GB memory, black dress versus white dress), or even more restrict, the same product with the same setting, or the same product, the same setting, and sold by the same seller. In this project, we do not have an exact requirement for similarity, but just focus on returning the most similar ones. For example, if we could not find the same product, we may just return the most related ones such as from the same category or from the same manufacturer.
 
- <img src="figure/ItemSim.pdf" title="fig:" alt="An illustrative Overview of Similar Item Search" />
+ <img src="figure/ItemSim.png" title="fig:" alt="An illustrative Overview of Similar Item Search" />
 
 The overview of this project is shown in Figure . We first perform featurization so that each item *I* is represented as a vector of features. Next, we index each items with Locality Sensitive Hashing (LSH), more specially, the Super-Bit Locality-Sensitive Hashing  so that two similar items in terms of feature representations would have higher probability of falling into the same bucket. With the LSH, given a search item *I*, we are able to quickly identify a candidate set *C* of similar items to *I* (approximate nearest neighbors ANN). Finally, for each item *I*<sub>*j*</sub> ∈ *C*, we compute its similarity towards the search item *I* and return the most similar one.
 
@@ -101,14 +101,14 @@ The detailed code documentation was located in the folder “JavaDoc". Here we j
 Does TFIDF Help?
 ----------------
 
- <img src="figure/TFIDF.pdf" title="fig:" alt="TFIDF Scores for Tokens in a Toy Example." />
+ <img src="figure/TFIDF.png" title="fig:" alt="TFIDF Scores for Tokens in a Toy Example." />
 
 Let us look at an illustrative example with query “iphone 6 plus" and 3 items in search results (see searchout/test\_iphone\_6\_plus.json). As shown in Figure , tokens with higher TFIDF scores (e.g., LTE) relatively provide more information than tokens with lower TFIDF scores (e.g., iphone). In the search results for “iphone 6 plus", we do expect every item would have the keyword “iphone" and thus sharing the term iphone does not help a lot in terms of identifying similar items. Therefore, it is intuitive that two items sharing tokens with higher TFIDF is more similar than another two iterms sharing tokens with lower TFIDFs.
 
 The Quality of LSH
 ------------------
 
- <img src="figure/LSH.pdf" title="fig:" alt="Similarity of Items from the same bucket versus different buckets." /> <img src="figure/LSH1.pdf" title="fig:" alt="Similarity of Items from the same bucket versus different buckets." />
+ <img src="figure/LSH.png" title="fig:" alt="Similarity of Items from the same bucket versus different buckets." /> <img src="figure/LSH1.png" title="fig:" alt="Similarity of Items from the same bucket versus different buckets." />
 
 As shown in Figure , generally, items from the same bucket are more similar to that from different buckets. For instance, among all the items that are related to “Hello Kitty", 99% of item pairs that are from different buckets have similarity less than 0.4, while 96% of item pairs that are from the same bucket have similarity less than 0.4. In addition, the maximum similarity between item pairs that are from different buckets is around 0.6, while the maximum between item pairs that are from the same bucket is up to 0.96. Although the Cumulated Probability Curve of item similarity from the same bucket is still far from the perfect curve, it guarantee that two items with high similarity (e.g., above 0.6) won’t be divided into two separate buckets. We have observed similarly pattern for times that are related to “Transformer". Therefore, LSH does work for finding items with high similarity.
 Future Works
@@ -126,7 +126,7 @@ Other Featurization
 
 As illustrated in Section , if we have a specific definition for “similar", a set of ground truths, we might go for supervised Featurization. A set of possible candidates are: gradient boost decision tree , or even popular deep learning techniques including auto-encoding (replicate neutral network ). If we have sufficient data and various candidate features, we could also use matrix factorization .
 
- <img src="figure/Multigraph.pdf" title="fig:" alt="An illustrative Example of Multi-type Graph" />
+ <img src="figure/Multigraph.png" title="fig:" alt="An illustrative Example of Multi-type Graph" />
 
 Multi-type Graph Clustering with Image Similarity
 -------------------------------------------------
