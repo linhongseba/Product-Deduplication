@@ -77,7 +77,9 @@ Alternatively, we could simply run the “run.sh" with parameters to execute the
 
     ./run.sh "Hello Kitty"
 
-**Note that the API Key setting Json file and the call\_ebay\_api.py should be put in the same directory of the executable jar file.** For the searchout folder, it should be placed in the same directory of the executable jar file. However, currently if no “searchout" folder exits, the program will automatically create this folder.
+Note that the API Key setting Json file and the call\_ebay\_api.py should be put in the same directory of the executable jar file.
+For the searchout folder, it should be placed in the same directory of the executable jar file. However, currently if no “searchout" folder exits, the program will automatically create this folder.
+
 Code Documentation
 ==================
 
@@ -160,6 +162,7 @@ The Quality of LSH
  <img src="figure/LSH.png" title="fig:" alt="Similarity of Items from the same bucket versus different buckets." /> <img src="figure/LSH1.png" title="fig:" alt="Similarity of Items from the same bucket versus different buckets." />
 
 As shown in Figure , generally, items from the same bucket are more similar to that from different buckets. For instance, among all the items that are related to “Hello Kitty", 99% of item pairs that are from different buckets have similarity less than 0.4, while 96% of item pairs that are from the same bucket have similarity less than 0.4. In addition, the maximum similarity between item pairs that are from different buckets is around 0.6, while the maximum between item pairs that are from the same bucket is up to 0.96. Although the Cumulated Probability Curve of item similarity from the same bucket is still far from the perfect curve, it guarantee that two items with high similarity (e.g., above 0.6) won’t be divided into two separate buckets. We have observed similarly pattern for times that are related to “Transformer". Therefore, LSH does work for finding items with high similarity.
+
 Future Works
 ============
 
